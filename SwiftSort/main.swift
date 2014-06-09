@@ -8,5 +8,23 @@
 
 import Foundation
 
-println("Hello, World!")
+func swiftSort()
+{
+    println("building array...")
+    
+    var array: CInt[] = [];
+    for var i = 0; i < 1000000; ++i
+    {
+        array.append(rand())
+    }
+    
+    println("sorting....")
+    
+    var start:CDouble = CFAbsoluteTimeGetCurrent();
+    var y = sort(array)
+    var end:CDouble = CFAbsoluteTimeGetCurrent();
+    
+    println("time: \(end-start)")
+}
 
+swiftSort()
